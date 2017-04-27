@@ -1,0 +1,46 @@
+{
+  "name": "ya-validator",
+  "version": "0.1.0",
+  "description": "Yet another validator",
+  "keywords": [
+    "validator",
+    "validation",
+    "validate"
+  ],
+  "author": "Alex Hu <askinnyworm@gmail.com> (https://github.com/skinnyworm)",
+  "homepage": "http://github.com/skinnyworm/ya-validator",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/skinnyworm/ya-validator.git"
+  },
+  "bugs": {
+    "url": "http://github.com/skinnyworm/ya-validator/issues"
+  },
+  "scripts":{
+    "test" : "jest --coverage --watch",
+    "clean": "rm -rf lib",
+    "babel": "babel src -d lib --ignore __tests__ --presets es2015",
+    "build": "npm run clean && npm run babel",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^19.0.0",
+    "babel-preset-es2017": "^6.24.1",
+    "dotenv": "^4.0.0",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "coverageReporters":["text","json"],
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
+    ]
+  }
+}
