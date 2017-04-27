@@ -1,6 +1,6 @@
 {
   "name": "ya-validator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yet another validator",
   "keywords": [
     "validator",
@@ -18,8 +18,8 @@
   "bugs": {
     "url": "http://github.com/skinnyworm/ya-validator/issues"
   },
-  "scripts":{
-    "test" : "jest --coverage --watch",
+  "scripts": {
+    "test": "jest --coverage --watch",
     "clean": "rm -rf lib",
     "babel": "babel src -d lib --ignore __tests__ --presets es2015",
     "build": "npm run clean && npm run babel",
@@ -38,7 +38,10 @@
     "jest": "^19.0.2"
   },
   "jest": {
-    "coverageReporters":["text","json"],
+    "coverageReporters": [
+      "text",
+      "json"
+    ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
     ]
